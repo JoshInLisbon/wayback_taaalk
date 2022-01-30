@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <title>Taaalk | Test Driven Development in Ruby on Rails - Joshua Summers &amp; Ricardo Otero</title>
+        <meta id="meta" name="js-loader" content="tlks-show" >
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="tbvuipieBJJVg5hV0HjNFu0pd2xYRfFJLFByUnd+H6c7P70/C8ZckBqnPrxt0EWKHLa/f18+KvMJoBXd1KYjJg==" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/packs/js/application-9c414d76ef68f0456f95.js" data-turbolinks-track="reload"></script>
+    <link rel="stylesheet" media="all" href="/assets/application-40181b187553227631c8f4df1d7000634685c11b6ef454fe80c408b8da3ccf34.css" data-turbolinks-track="reload" />
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon-d3e220a5d00985ec7043ba5c160cac8a73df50fba21d2fbb684af206efe8eca3.ico" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-light">
+
+  <a class="navbar-brand tlk-brand" href="/">Taaa<span class='fc-logo'>l</span>k</a>
+
+  <div class="navbar-non-logo">
+    <div class="nav-btn-holder">
+      <a href="/start-conversation">
+        <div class="nav-btn ">
+        <i class="fas fa-align-left"></i>Start a Conversation
+        </div>
+</a>    </div>
+
+
+    <div class="nav-btn-holder">
+
+        <a href="/users/sign_in">
+        <div class="nav-btn login-btn">
+          Log In
+        </div>
+</a>    </div>
+  </div>
+</nav>
+
+    <div class="calc-height-navbar">
+      
+  <div id="tlk-section-read">
+    
+<div class="tlk-image bg-purp"
+  style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWjQ9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c56f89e8d8deaa7861f86d4b87082e86e8ff826a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFKQUJqQTZFR0YxZEc5ZmIzSnBaVzUwVkRvTVozSmhkbWwwZVVraUMyTmxiblJsY2dZNkJrVlUiLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--25fddff6bdb0fe960586d897c16d7c7709ec405e/1_mo7DvikFAuMDDNtz6VTyWg.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;"
+>
+  <h1 class="tlk-title">Test Driven Development in Ruby on Rails</h1>
+
+</div>
+
+
+<div class="tlk-container">
+
+    <div class="spkr-color-99">
+      <div class="msg-48">
+        <div class="spkr-info spkr-info-left">
+          <div class="spkr-image-and-name">
+            <div class="spkr-bio-image spkr-image image-spkr-99"
+                style="background-image: url(/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b12355bc47dd05a966918b8f6edea2442e056d46/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2QzNKbGMybDZaVWtpRFRFd05IZ3hNRFJlQmpvR1JWUTZFR0YxZEc5ZmIzSnBaVzUwVkRvTVozSmhkbWwwZVVraUMyTmxiblJsY2dZN0IxUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--cccc2840663003c8560dd0321607ac1c663d4500/IMG-20200426-WA0002.jpg)"
+              >
+            </div>
+            <div>
+              <h3><a class="name-spkr-99" href="/u/joshua-summers">Joshua Summers</a></h3>
+              <div id="twitter-handle-div-99">
+                  <a id="twitter-handle-99" class="twitter-handle" href="https://twitter.com/JoshSummers1234"><i class="fab fa-twitter"></i> JoshSummers1234</a>
+              </div>
+            </div>
+          </div>
+          <div class="spkr-biog-holder-tlk-left">
+            <div class="spkr-biog biog-spkr-99">
+              <div class="spkr-biog-left spkr-biog-present">
+                <div class="trix-content">
+  <div>Graduate of <a href="https://www.lewagon.com/lisbon">Le Wagon Ruby on Rails bootcamp in Lisbon</a>. Learning TDD, and looking to know when and how to do it like a pro 🕶.</div>
+</div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="spkr-color-115">
+      <div class="msg-22">
+        <div class="spkr-info spkr-info-right">
+          <div class="spkr-image-and-name">
+            <div class="spkr-bio-image spkr-image image-spkr-115"
+                style="background-image: url(/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBY3M9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a2b3071d0c882297e38364b45cd8b8ecb882fb13/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2QzNKbGMybDZaVWtpRFRFd05IZ3hNRFJlQmpvR1JWUTZFR0YxZEc5ZmIzSnBaVzUwVkRvTVozSmhkbWwwZVVraUMyTmxiblJsY2dZN0IxUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--cccc2840663003c8560dd0321607ac1c663d4500/w5LorxU6.jpg)"
+              >
+            </div>
+            <div>
+              <h3><a class="name-spkr-115" href="/u/ricardo-otero">Ricardo Otero</a></h3>
+              <div id="twitter-handle-div-115">
+                  <a id="twitter-handle-115" class="twitter-handle" href="https://twitter.com/rikas"><i class="fab fa-twitter"></i> rikas</a>
+              </div>
+            </div>
+          </div>
+          <div class="spkr-biog-holder-tlk-right">
+            <div class="spkr-biog biog-spkr-115">
+              <div class="spkr-biog-left spkr-biog-present">
+                <div class="trix-content">
+  <div>I'm a web developer since 2007, working mainly with Ruby and Javascript.</div>
+</div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+  </div>
+
+
+<div class="tlk-follow-div">
+    <div class="tlk-container">
+    <a class="tlk-follow-link link-txt" data-remote="true" rel="nofollow" data-method="post" href="/tlks/59/tlk_follows?spkrs_follow=true">
+    Follow this Taaalk
+</a>    <div class="tlk-note tlk-follow-note">
+      <p>2 followers</p>
+    </div>
+    <div class="tlk-note tlk-follow-note tlk-views-note" style="margin-left: 3px;">
+      <p>1,553 views</p>
+    </div>
+</div>
+
+</div>
+
+<div class="tlk-container">
+<div class="big-blue-split"></div>
+</div>
+
+
+  <div class="tlking-container">
+
+      <div class="tlk-blob tlk-blob-left" id="1" >
+        <div class="tlk-blob-spkr">
+          <div class="tlk-tlking-image spkr-image image-spkr-99"
+              style="background-image: url(/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b12355bc47dd05a966918b8f6edea2442e056d46/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2QzNKbGMybDZaVWtpRFRFd05IZ3hNRFJlQmpvR1JWUTZFR0YxZEc5ZmIzSnBaVzUwVkRvTVozSmhkbWwwZVVraUMyTmxiblJsY2dZN0IxUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--cccc2840663003c8560dd0321607ac1c663d4500/IMG-20200426-WA0002.jpg)"
+            >
+          </div>
+          <div class="name-spkr-99 tlk-blob-name">Joshua Summers</div>
+          <div class="tlk-blob-date">11:38, 15 Jul 20</div>
+        </div>
+        <div class="spkr-color-99">
+          <div class="msg-48" target="spkr-color-">
+            <div class="tlk-blob-msg"><div class="trix-content">
+  <div class="tlk-bubble-holder"><div class="tlk-bubble">Hello Ricardo 👋</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">So before we get into the code-based details of testing, it would be great to talk about it at a conceptual, but practical, level first.</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">This means I don't want to know what the "best practice" is, or what is "theoretically possible", but<strong> how you really use testing</strong>.</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">So when you are actually building an application with TDD, in a general sense, how and when are you using tests?</div></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tlk-blob tlk-blob-right" id="2" >
+        <div class="tlk-blob-spkr">
+          <div class="tlk-tlking-image spkr-image image-spkr-115"
+              style="background-image: url(/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBY3M9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a2b3071d0c882297e38364b45cd8b8ecb882fb13/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2QzNKbGMybDZaVWtpRFRFd05IZ3hNRFJlQmpvR1JWUTZFR0YxZEc5ZmIzSnBaVzUwVkRvTVozSmhkbWwwZVVraUMyTmxiblJsY2dZN0IxUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--cccc2840663003c8560dd0321607ac1c663d4500/w5LorxU6.jpg)"
+            >
+          </div>
+          <div class="name-spkr-115 tlk-blob-name">Ricardo Otero</div>
+          <div class="tlk-blob-date">14:20, 15 Jul 20 (edit: 14:24, 15 Jul 20)</div>
+        </div>
+        <div class="spkr-color-115">
+          <div class="msg-22" target="spkr-color-">
+            <div class="tlk-blob-msg"><div class="trix-content">
+  <div class="tlk-bubble-holder"><div class="tlk-bubble">Hi Josh 👋</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">Sure, I know there's a lot of best practices on testing, specially when you're in the "Ruby world", but I don't know anyone that really follows those 😅</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">So, in theory, the "good practice" is to do TDD (Test Driven Development) for everything, which means you write your tests (all of them will fail) and then you start coding your application to make those tests pass.</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">You do this for small blocks in your app, say a model, a controller, etc., one at a time.</div></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tlk-blob tlk-blob-left" id="3" >
+        <div class="tlk-blob-spkr">
+          <div class="tlk-tlking-image spkr-image image-spkr-99"
+              style="background-image: url(/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b12355bc47dd05a966918b8f6edea2442e056d46/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2QzNKbGMybDZaVWtpRFRFd05IZ3hNRFJlQmpvR1JWUTZFR0YxZEc5ZmIzSnBaVzUwVkRvTVozSmhkbWwwZVVraUMyTmxiblJsY2dZN0IxUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--cccc2840663003c8560dd0321607ac1c663d4500/IMG-20200426-WA0002.jpg)"
+            >
+          </div>
+          <div class="name-spkr-99 tlk-blob-name">Joshua Summers</div>
+          <div class="tlk-blob-date">14:25, 15 Jul 20</div>
+        </div>
+        <div class="spkr-color-99">
+          <div class="msg-48" target="spkr-color-">
+            <div class="tlk-blob-msg"><div class="trix-content">
+  <div class="tlk-bubble-holder"><div class="tlk-bubble">And that's actually what <strong>you</strong> do? Or is that what you <em>should</em> do?</div></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tlk-blob tlk-blob-right" id="4" >
+        <div class="tlk-blob-spkr">
+          <div class="tlk-tlking-image spkr-image image-spkr-115"
+              style="background-image: url(/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBY3M9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a2b3071d0c882297e38364b45cd8b8ecb882fb13/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2QzNKbGMybDZaVWtpRFRFd05IZ3hNRFJlQmpvR1JWUTZFR0YxZEc5ZmIzSnBaVzUwVkRvTVozSmhkbWwwZVVraUMyTmxiblJsY2dZN0IxUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--cccc2840663003c8560dd0321607ac1c663d4500/w5LorxU6.jpg)"
+            >
+          </div>
+          <div class="name-spkr-115 tlk-blob-name">Ricardo Otero</div>
+          <div class="tlk-blob-date">14:28, 15 Jul 20</div>
+        </div>
+        <div class="spkr-color-115">
+          <div class="msg-22" target="spkr-color-">
+            <div class="tlk-blob-msg"><div class="trix-content">
+  <div class="tlk-bubble-holder"><div class="tlk-bubble">I do it in some specific scenarios. It's very hard for me (and I would say most people) to think ahead and know which methods, associations, inheritance, etc. a class will have to achieve a certain goal. For two reasons:</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble"><ol>
+<li>You can achieve the same goal in a lot of different ways</li>
+<li>When you code you often refactor along the way, you start with a simple version and then change it right away because you see things can be done in a better way.</li>
+</ol></div></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tlk-blob tlk-blob-right" id="5" >
+        <div class="tlk-blob-spkr">
+          <div class="tlk-tlking-image spkr-image image-spkr-115"
+              style="background-image: url(/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBY3M9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a2b3071d0c882297e38364b45cd8b8ecb882fb13/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2QzNKbGMybDZaVWtpRFRFd05IZ3hNRFJlQmpvR1JWUTZFR0YxZEc5ZmIzSnBaVzUwVkRvTVozSmhkbWwwZVVraUMyTmxiblJsY2dZN0IxUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--cccc2840663003c8560dd0321607ac1c663d4500/w5LorxU6.jpg)"
+            >
+          </div>
+          <div class="name-spkr-115 tlk-blob-name">Ricardo Otero</div>
+          <div class="tlk-blob-date">14:30, 15 Jul 20</div>
+        </div>
+        <div class="spkr-color-115">
+          <div class="msg-22" target="spkr-color-">
+            <div class="tlk-blob-msg"><div class="trix-content">
+  <div class="tlk-bubble-holder"><div class="tlk-bubble">So, usually I start coding, small pieces of code, and for each small bit I create tests for it, after I'm happy with the code.</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">Often tests actually help me to refactor the code again! If the tests are hard to write it means that your code is not very good, so that's a big plus of testing everything in my opinion.</div></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tlk-blob tlk-blob-left" id="6" >
+        <div class="tlk-blob-spkr">
+          <div class="tlk-tlking-image spkr-image image-spkr-99"
+              style="background-image: url(/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b12355bc47dd05a966918b8f6edea2442e056d46/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2QzNKbGMybDZaVWtpRFRFd05IZ3hNRFJlQmpvR1JWUTZFR0YxZEc5ZmIzSnBaVzUwVkRvTVozSmhkbWwwZVVraUMyTmxiblJsY2dZN0IxUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--cccc2840663003c8560dd0321607ac1c663d4500/IMG-20200426-WA0002.jpg)"
+            >
+          </div>
+          <div class="name-spkr-99 tlk-blob-name">Joshua Summers</div>
+          <div class="tlk-blob-date">14:32, 15 Jul 20 (edit: 14:33, 15 Jul 20)</div>
+        </div>
+        <div class="spkr-color-99">
+          <div class="msg-48" target="spkr-color-">
+            <div class="tlk-blob-msg"><div class="trix-content">
+  <div class="tlk-bubble-holder"><div class="tlk-bubble">OK! And why is this:</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble"><blockquote>If the tests are hard to write it means that your code is not very good</blockquote></div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">true?</div></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tlk-blob tlk-blob-right" id="7" >
+        <div class="tlk-blob-spkr">
+          <div class="tlk-tlking-image spkr-image image-spkr-115"
+              style="background-image: url(/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBY3M9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a2b3071d0c882297e38364b45cd8b8ecb882fb13/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2QzNKbGMybDZaVWtpRFRFd05IZ3hNRFJlQmpvR1JWUTZFR0YxZEc5ZmIzSnBaVzUwVkRvTVozSmhkbWwwZVVraUMyTmxiblJsY2dZN0IxUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--cccc2840663003c8560dd0321607ac1c663d4500/w5LorxU6.jpg)"
+            >
+          </div>
+          <div class="name-spkr-115 tlk-blob-name">Ricardo Otero</div>
+          <div class="tlk-blob-date">14:43, 15 Jul 20</div>
+        </div>
+        <div class="spkr-color-115">
+          <div class="msg-22" target="spkr-color-">
+            <div class="tlk-blob-msg"><div class="trix-content">
+  <div class="tlk-bubble-holder"><div class="tlk-bubble">Well, usually what I find a lot is that code that is too coupled together is harder to test. But sometimes that code could (should!) be separated. Imagine a Restaurant class, that represents a restaurant in your app. You may have a <em>name</em> method, and that's fine, it belongs to the restaurant. But you shouldn't have a <em>chef_calendar</em>  there, since it should be in the Chef class, associated with the restaurant. If you try to test this method you need to create a chef, with a calendar, but you're testing the restaurant, so you need to create associated models for every test.</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">In this example, the chef calendar logic will be harder to test when in the "restaurant scope", specially because you're creating instances (the restaurant) that are not needed for what you want to test. Probably we should have a Chef class and even maybe a ChefCalendar class. If you separate concerns (which is a good practice) tests are much easier to write. So one thing leads to the other, code that is well structured is easy to test.</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">If my code starts to be a pain to test I often think of ways to decouple things and by making the tests easier to write I often improve the code quality a lot!</div></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tlk-blob tlk-blob-left" id="8" >
+        <div class="tlk-blob-spkr">
+          <div class="tlk-tlking-image spkr-image image-spkr-99"
+              style="background-image: url(/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b12355bc47dd05a966918b8f6edea2442e056d46/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2QzNKbGMybDZaVWtpRFRFd05IZ3hNRFJlQmpvR1JWUTZFR0YxZEc5ZmIzSnBaVzUwVkRvTVozSmhkbWwwZVVraUMyTmxiblJsY2dZN0IxUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--cccc2840663003c8560dd0321607ac1c663d4500/IMG-20200426-WA0002.jpg)"
+            >
+          </div>
+          <div class="name-spkr-99 tlk-blob-name">Joshua Summers</div>
+          <div class="tlk-blob-date">16:20, 27 Jul 20</div>
+        </div>
+        <div class="spkr-color-99">
+          <div class="msg-48" target="spkr-color-">
+            <div class="tlk-blob-msg"><div class="trix-content">
+  <div class="tlk-bubble-holder"><div class="tlk-bubble">Right, I get you. </div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">So as a relative newbie to testing it feels like everything and anything can be tested. Let's say you were making a basic chef rota app:</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">
+<span>﻿</span><action-text-attachment sgid="BAh7CEkiCGdpZAY6BkVUSSI5Z2lkOi8vdGFhYWxrLWVkZ2UvQWN0aXZlU3RvcmFnZTo6QmxvYi8yMTY_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiD2F0dGFjaGFibGUGOwBUSSIPZXhwaXJlc19hdAY7AFQw--becc87b5e4729a8ffb113968de30305915ac7e31" content-type="image/png" url="https://taaalk.co/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZGc9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ea3255f160cf93a1e33c993c71656880f6796436/image.png" filename="image.png" filesize="31733" width="601" height="273" previewable="true" presentation="gallery"><figure class="attachment attachment--preview attachment--png">
+    <img src="https://taaalk.co/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZGc9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ea3255f160cf93a1e33c993c71656880f6796436/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VY21WemFYcGxYM1J2WDJ4cGJXbDBXd2RwQWdBRWFRSUFBdz09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--49a1b3a84cee51a7afa24b1e4856d59312b48236/image.png">
+
+  <figcaption class="attachment__caption">
+      <span class="attachment__name">image.png</span>
+      <span class="attachment__size">31 KB</span>
+  </figcaption>
+</figure></action-text-attachment><span>﻿</span>
+</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">What would be the first test you'd write and when? For example would you write a test before running:</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble"><pre>$ rails g model restaurant name</pre></div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">?</div></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tlk-blob tlk-blob-right" id="9" >
+        <div class="tlk-blob-spkr">
+          <div class="tlk-tlking-image spkr-image image-spkr-115"
+              style="background-image: url(/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBY3M9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a2b3071d0c882297e38364b45cd8b8ecb882fb13/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2QzNKbGMybDZaVWtpRFRFd05IZ3hNRFJlQmpvR1JWUTZFR0YxZEc5ZmIzSnBaVzUwVkRvTVozSmhkbWwwZVVraUMyTmxiblJsY2dZN0IxUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--cccc2840663003c8560dd0321607ac1c663d4500/w5LorxU6.jpg)"
+            >
+          </div>
+          <div class="name-spkr-115 tlk-blob-name">Ricardo Otero</div>
+          <div class="tlk-blob-date">07:46, 31 Jul 20</div>
+        </div>
+        <div class="spkr-color-115">
+          <div class="msg-22" target="spkr-color-">
+            <div class="tlk-blob-msg"><div class="trix-content">
+  <div class="tlk-bubble-holder"><div class="tlk-bubble">I wouldn't, because that command will generate the classes for me, so it would avoid having tests failing because the classes don't exist :)</div></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tlk-blob tlk-blob-right" id="10" >
+        <div class="tlk-blob-spkr">
+          <div class="tlk-tlking-image spkr-image image-spkr-115"
+              style="background-image: url(/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBY3M9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a2b3071d0c882297e38364b45cd8b8ecb882fb13/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2QzNKbGMybDZaVWtpRFRFd05IZ3hNRFJlQmpvR1JWUTZFR0YxZEc5ZmIzSnBaVzUwVkRvTVozSmhkbWwwZVVraUMyTmxiblJsY2dZN0IxUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--cccc2840663003c8560dd0321607ac1c663d4500/w5LorxU6.jpg)"
+            >
+          </div>
+          <div class="name-spkr-115 tlk-blob-name">Ricardo Otero</div>
+          <div class="tlk-blob-date">07:50, 31 Jul 20</div>
+        </div>
+        <div class="spkr-color-115">
+          <div class="msg-22" target="spkr-color-">
+            <div class="tlk-blob-msg"><div class="trix-content">
+  <div class="tlk-bubble-holder"><div class="tlk-bubble">But I would probably write test right after that command. The models are usually easy to test, you can add tests to check some business logic (say that the restaurant name must follow some rules for example). Thinking ahead is the trick about TDD that is not always easy, but for simple things like this sometimes I end up doing it.</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">However, like I mentioned before, most of the times I just build the logic — restaurant class, validations, associations and additional methods — and then jump into the tests. Usually I do this one at a time, so I would do Restaurant first, then Chefs and then ChefRotas.</div></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tlk-blob tlk-blob-left" id="11" >
+        <div class="tlk-blob-spkr">
+          <div class="tlk-tlking-image spkr-image image-spkr-99"
+              style="background-image: url(/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b12355bc47dd05a966918b8f6edea2442e056d46/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2QzNKbGMybDZaVWtpRFRFd05IZ3hNRFJlQmpvR1JWUTZFR0YxZEc5ZmIzSnBaVzUwVkRvTVozSmhkbWwwZVVraUMyTmxiblJsY2dZN0IxUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--cccc2840663003c8560dd0321607ac1c663d4500/IMG-20200426-WA0002.jpg)"
+            >
+          </div>
+          <div class="name-spkr-99 tlk-blob-name">Joshua Summers</div>
+          <div class="tlk-blob-date">08:52, 31 Jul 20</div>
+        </div>
+        <div class="spkr-color-99">
+          <div class="msg-48" target="spkr-color-">
+            <div class="tlk-blob-msg"><div class="trix-content">
+  <div class="tlk-bubble-holder"><div class="tlk-bubble">Ok, so let's say we wanted to validate the presence of a Restaurant name, that would be the first test you write?</div></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tlk-blob tlk-blob-right" id="12" >
+        <div class="tlk-blob-spkr">
+          <div class="tlk-tlking-image spkr-image image-spkr-115"
+              style="background-image: url(/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBY3M9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a2b3071d0c882297e38364b45cd8b8ecb882fb13/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2QzNKbGMybDZaVWtpRFRFd05IZ3hNRFJlQmpvR1JWUTZFR0YxZEc5ZmIzSnBaVzUwVkRvTVozSmhkbWwwZVVraUMyTmxiblJsY2dZN0IxUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--cccc2840663003c8560dd0321607ac1c663d4500/w5LorxU6.jpg)"
+            >
+          </div>
+          <div class="name-spkr-115 tlk-blob-name">Ricardo Otero</div>
+          <div class="tlk-blob-date">12:21, 31 Jul 20</div>
+        </div>
+        <div class="spkr-color-115">
+          <div class="msg-22" target="spkr-color-">
+            <div class="tlk-blob-msg"><div class="trix-content">
+  <div class="tlk-bubble-holder"><div class="tlk-bubble">For example, yes 🙂</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">That's an easy one that you can test without "predicting" how the code will look like, because that's what you have to do a little bit when doing TDD.</div></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tlk-blob tlk-blob-left" id="13" >
+        <div class="tlk-blob-spkr">
+          <div class="tlk-tlking-image spkr-image image-spkr-99"
+              style="background-image: url(/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b12355bc47dd05a966918b8f6edea2442e056d46/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2QzNKbGMybDZaVWtpRFRFd05IZ3hNRFJlQmpvR1JWUTZFR0YxZEc5ZmIzSnBaVzUwVkRvTVozSmhkbWwwZVVraUMyTmxiblJsY2dZN0IxUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--cccc2840663003c8560dd0321607ac1c663d4500/IMG-20200426-WA0002.jpg)"
+            >
+          </div>
+          <div class="name-spkr-99 tlk-blob-name">Joshua Summers</div>
+          <div class="tlk-blob-date">12:35, 31 Jul 20</div>
+        </div>
+        <div class="spkr-color-99">
+          <div class="msg-48" target="spkr-color-">
+            <div class="tlk-blob-msg"><div class="trix-content">
+  <div class="tlk-bubble-holder"><div class="tlk-bubble">You have to predict what the code will look like?</div></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tlk-blob tlk-blob-right" id="14" >
+        <div class="tlk-blob-spkr">
+          <div class="tlk-tlking-image spkr-image image-spkr-115"
+              style="background-image: url(/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBY3M9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a2b3071d0c882297e38364b45cd8b8ecb882fb13/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2QzNKbGMybDZaVWtpRFRFd05IZ3hNRFJlQmpvR1JWUTZFR0YxZEc5ZmIzSnBaVzUwVkRvTVozSmhkbWwwZVVraUMyTmxiblJsY2dZN0IxUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--cccc2840663003c8560dd0321607ac1c663d4500/w5LorxU6.jpg)"
+            >
+          </div>
+          <div class="name-spkr-115 tlk-blob-name">Ricardo Otero</div>
+          <div class="tlk-blob-date">12:51, 31 Jul 20</div>
+        </div>
+        <div class="spkr-color-115">
+          <div class="msg-22" target="spkr-color-">
+            <div class="tlk-blob-msg"><div class="trix-content">
+  <div class="tlk-bubble-holder"><div class="tlk-bubble">Yes, since you're writing tests before the code exists (for "real" TDD) you need to know what code you'll have before writing it. Validations are often very easy to predict :)</div></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tlk-blob tlk-blob-left" id="15" >
+        <div class="tlk-blob-spkr">
+          <div class="tlk-tlking-image spkr-image image-spkr-99"
+              style="background-image: url(/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b12355bc47dd05a966918b8f6edea2442e056d46/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2QzNKbGMybDZaVWtpRFRFd05IZ3hNRFJlQmpvR1JWUTZFR0YxZEc5ZmIzSnBaVzUwVkRvTVozSmhkbWwwZVVraUMyTmxiblJsY2dZN0IxUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--cccc2840663003c8560dd0321607ac1c663d4500/IMG-20200426-WA0002.jpg)"
+            >
+          </div>
+          <div class="name-spkr-99 tlk-blob-name">Joshua Summers</div>
+          <div class="tlk-blob-date">12:57, 31 Jul 20</div>
+        </div>
+        <div class="spkr-color-99">
+          <div class="msg-48" target="spkr-color-">
+            <div class="tlk-blob-msg"><div class="trix-content">
+  <div class="tlk-bubble-holder"><div class="tlk-bubble">And what if you are working on something complex? If I'm doing something that isn't a standard CRUD, perhaps some complex business logic instead, I don't know how my code is going to look before I get lost in the problem.</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">Does that mean I'm not breaking my problems down enough? Or do you handle things differently when you are working on something non standard?</div></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+
+
+<div class="tlk-container">
+  <div class="big-white-split big-blue-split-bottom"></div>
+</div>
+
+
+<div class="tlk-container">
+
+
+
+
+</div>
+
+  <div class="tlk-follow-div">
+    <div class="tlk-container">
+    <a class="tlk-follow-link link-txt" data-remote="true" rel="nofollow" data-method="post" href="/tlks/59/tlk_follows?spkrs_follow=true">
+    Follow this Taaalk
+</a>    <div class="tlk-note tlk-follow-note">
+      <p>2 followers</p>
+    </div>
+    <div class="tlk-note tlk-follow-note tlk-views-note" style="margin-left: 3px;">
+      <p>1,553 views</p>
+    </div>
+</div>
+
+</div>
+
+  <div class="tlk-btm-follow-spacer"></div>
+
+<div class="tlk-container anyone-tlk-container-2">
+  <a class="link-txt" href="/start-conversation">Start your own Taaalk</a>,
+  <a class="link-txt" href="/start-conversation">leave your details</a> or
+  <a class="link-txt" href="/start-conversation">meet someone</a>
+  to Taaalk with.
+</div>
+
+
+
+    </div>
+    <div class="bg-footer div-footer">
+    <div class="narrow-div-footer internal-div-footer">
+    <a class="navbar-brand tlk-brand" href="/">Taaa<span class='fc-logo'>l</span>k</a>
+    <div class="taaalk-about josh-info-closed">
+      <p><strong>So why did Taaalk get built?</strong></p>
+      <p>The world is filled with people who know lots of cool stuff and weird things. When it comes to interviews, traditionally it's been the case that a journalist has to take an interest in what you do before you get one. That doesn't happen too often, so it's probably the case that the world is under-interviewed. Taaalk is here to change that. INTERVIEWS FOR EVERYONE.</p>
+      <p>But the word "interview" doesn't really capture what Taaalk is about. It's a bit too formal, and implies there is one person with all the knowledge (the interviewee) and another person getting it from them (the journalist/interviewer). Taaalk can be used more flexibly than that. Four people (a Taaalk can have any number of people) who know a lot about a subject can have an extremely nerdy and detailed Taaalk about it. Three people who don't know too much about anything can blab away to each other, just because they enjoy blabbing. And you don't even need to invite anyone to your Taaalk, if you want to write a poem every day, or share a continuous stream of thoughts about a subject of your choice, you can use Taaalk as a place to do that; monologues are a-ok.</p>
+      <p>And Taaalk is built for you to be even more creative than that. You can invite yourself to your own Taaalk, change the second-you's details and have an imaginary conversation. You can invite yourself to a Taaalk any number of times, and write a whole play made up of the dialogue of imaginary characters. </p>
+      <p><strong>If you don't have anyone to Taaalk with today</strong>, you can leave your details on the <a href="/start-conversation">Start a Conversation</a> page. This means someone looking to Taaalk can introduce themselves to you. And you can introduce yourself to someone else who has left their details.</p>
+      <p>More seriously, <strong>we have all grown up in a digital world that is a bit awkward</strong>. In the real world you don't walk around shouting out random facts and opinions, instead you talk to people. And in the real world while you're talking, hundreds of random people don't jump into your conversation. The best chats have a healthy level of intimacy. Taaalk tries to recreate these real world properties online. Firstly, it is all about talking (taaalking). Back and forths. This makes things feel a bit more natural than shouting out snip-its of thoughts and ideas. There's also no character limit and you can save drafts before you reply, so it's a place for deep conversations. You might find that you enjoy Taaalking even if you have normally found yourself to be a bit too shy to fully enjoy other platforms. Secondly, though anyone can read a Taaalk, only the people the "Taaalk Owner" (the person who started the Taaalk) chooses can join in the conversation. This keeps things intimate.</p>
+      <p><strong>What you say matters (and might embarrass you).</strong> Because of this Taaalk comes with features to make you feel safe sharing your thoughts. Firstly, even if you are not the Taaalk Owner, you can leave a Taaalk and delete all your messages at the same time. The Taaalk will still exist, but what you've written will not. If you are a Taaalk Owner you can delete your Taaalk at any time. You can delete your account, deleting all messages you've written on the Taaalk platform and all the Taaalks you've started at the same time. It's possible to edit or delete an individual message after you have written it. And because it's possible to edit a message after someone has responded to it, we flag up when a message has been edited, so if you are the responder, you don't have to worry about someone changing the question after you've written a response to it. We hope these measures make you feel safe to share yourself on Taaalk, and if you have any more ideas, please come to the <a href="/t/taaalk-feedback">Taaalk feedback conversation</a> to discuss them.</p>
+    </div>
+    <p id="taaalk-read-about">About</p>
+    <script type="text/javascript">
+      var taaalkAbout = document.querySelector('.taaalk-about');
+      var taaalkAboutBtn = document.querySelector('#taaalk-read-about')
+      taaalkAboutBtn.addEventListener('click', (event) => {
+        taaalkAbout.classList.toggle('josh-info-closed');
+        if (taaalkAboutBtn.innerText == 'About') {
+          taaalkAboutBtn.innerText = 'Show less'
+        } else {
+          taaalkAboutBtn.innerText = 'About'
+        }
+      });
+    </script>
+    <p><a href="/t/taaalk-feedback">Feedback</a></p>
+
+    <!-- <div class="josh-info josh-info-closed">
+      <p>Hi, my name is Joshua and I built and designed Taaalk. I'm a product focused full stack developer and before that I was an analyst at one of Europe's top VC funds. I'm looking to be employed in either field, so please <a href="mailto:eichler [dot] summers [at] gmail [dot] com">get in touch with me</a> if you're hiring.</p>
+      <p><strong>Other projects:</strong></p>
+      <p>I write about psychology and technology.</p>
+      <p><strong>Psychology: </strong><a href="https://psyarxiv.com/k6trz">https://psyarxiv.com/k6trz</a> - [Paper] A Suggestion for a New Interpretation of Dreams: Dreaming Is the Inverse of Anxious Mind-Wandering.</p>
+      <p><strong>Psychology: </strong>(Coming soon) [Book] The Mechanics of Mental Health. <a href="https://twitter.com/JoshSummers1234">Follow me on Twitter</a> for updates.</p>
+      <p><strong>Technology: </strong>(Coming soon) [Book] How to Analyse Like a Venture Capitalist. <a href="https://twitter.com/JoshSummers1234">Twitter</a> for updates.</p>
+    </div>
+    <p id="josh-read-more">Hire me & see my other projects</p>
+    <script type="text/javascript">
+      var joshInfo = document.querySelector('.josh-info');
+      var joshInfoBtn = document.querySelector('#josh-read-more')
+      joshInfoBtn.addEventListener('click', (event) => {
+        joshInfo.classList.toggle('josh-info-closed');
+        if (joshInfoBtn.innerText == 'Hire me & see my other projects') {
+          joshInfoBtn.innerText = 'Show Less'
+        } else {
+          joshInfoBtn.innerText = 'Hire me & see my other projects'
+        }
+      });
+    </script> -->
+    <p class="opacity07">By using this website you agree to our:</p>
+    <p><a href="/privacy">Privacy Policy</a> <span class="opacity07">and</span> <a href="/terms">Terms of Service</a></p>
+  </div>
+</div>
+
+    <script src="/packs/js/on_new_page-72c58be62c1dcc8a1a70.js"></script>
+  </body>
+</html>

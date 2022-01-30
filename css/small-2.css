@@ -1,0 +1,407 @@
+@media only screen and (max-width : 856px ) {
+	#title_container {
+		width:100%;
+		height:50%;
+		position: relative;
+		background-image: url('../img/chair1e.jpg');
+		background-size: 100% auto;
+		min-width: 100%;
+		max-height: 300px;
+	}
+	#content_container{
+		width: 100%;
+		margin-left: 0;
+		overflow: visible;
+	}
+
+	.i-top-higher-index {
+		padding: 0 12px;
+	}
+
+	.position_div {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 30px;
+	}
+
+	#title_content{
+		position: static;
+		max-width: 615px;
+		margin: 0 18px;
+		max-width: auto;
+	}
+
+	.content_title {
+		margin: 24px 0 20px 20px;
+		font-size: 16px;
+	}
+
+	.post {
+		width: auto;
+		margin-left: 18px;
+		margin-right: 18px;
+	}
+
+	.mails {
+		display: block;
+		font-size: 10px;
+		font-weight: 400;
+		color: grey;
+		margin-top: 10px;
+		margin-left: 0;
+		vertical-align: top;
+		line-height: 1.6;
+	}
+
+
+	.i-top-higher {
+		z-index: 200;
+		top: 36px;
+		left: 12px;
+	}
+
+	.interview {
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+
+	.interview h1 {
+		margin-top: 24px;
+		margin-bottom: 24px;
+		font-size: 30px;
+	}
+
+	.interview-details {
+
+	}
+
+	.i-person-image-big {
+	width: 50px;
+	height: 50px;
+	background-color: #f0f0f0;
+	display: inline-block;
+	-webkit-border-radius: 32px;
+	-moz-border-radius: 32px;
+	border-radius: 32px;
+	}
+
+	.i-person-details {
+		display: inline-block;
+		height: 50px;
+		vertical-align: top;
+
+	}
+
+	.index-header {
+		font-size: 20px;
+	}
+
+	.interview h2 {
+		font-size: 24px;
+	}
+
+	.interview h3 {
+		font-size: 16px;
+	}
+
+	.interview h4 {
+		font-size: 16px;
+	}
+
+	.div-deep-ee {
+		max-height: 72px;
+		margin-bottom: 8px;
+		}
+
+	.div-deep-ee p {
+		font-size: 16px;
+		font-weight: 400;
+	}
+
+	.about-div-deep p {
+		font-size: 16px;
+		font-weight: 400;
+	}
+
+	.read-more {
+	font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  background-color: rgb(166, 168, 171);
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 16px;
+  /* padding-top: 0; */
+  /* padding-bottom: 18px; */
+  font-weight: 500;
+  color: white;
+  /* display: block; */
+  vertical-align: top;
+  /* text-decoration: underline; */
+  padding: 2px 7px;
+  border-radius: 4px;
+	}
+
+	.read-more span {
+		cursor: pointer;
+	}
+
+
+
+	.actual-interview {
+		max-width: 872px;
+		margin: 0 auto;
+		margin-top: 12px;d
+	}
+
+	.actual-interview h4 {
+		font-size: 16px;
+	}
+
+	.ask {
+		vertical-align: top;
+		text-align: right;
+		padding-top: 24px
+	}
+
+	.ask-name {
+		text-align: right;
+		padding-right: 8px;
+		padding-bottom: 0px;
+		display: inline-block;
+		margin-top: 6px;
+	}
+
+	.ask-text {
+		max-width: 100%;
+		display: inline-block;
+
+	}
+
+	.ask-text p {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 1.5;
+		font-style: normal;
+		letter-spacing: .01rem;
+		margin-top: 0;
+		margin-bottom: 6px;
+		padding: 8px 12px 8px 12px;
+		-webkit-border-radius: 20px;
+		-moz-border-radius: 20px;
+		border-radius: 20px;
+		text-align: left;
+	}
+
+	.ask-text p img {
+		margin-top: 5px;
+	}
+
+	.ask-image {
+		display: inline-block;
+		width: auto;
+		vertical-align: top;
+	}
+
+	.ask-image-left {
+		float: left;
+		padding-right: 8px;
+	}
+
+	.ask-image-right {
+		float: right;
+		padding-left: 8px;
+	}
+
+	.interview-image {
+		height: 32px;
+		width: 32px;
+		-webkit-border-radius: 32px;
+		-moz-border-radius: 32px;
+		border-radius: 32px;
+		opacity: 0.5;
+		margin-bottom: 6px;
+	}
+
+	.answer {
+		vertical-align: top;
+		padding-top: 24px;
+	}
+
+	.answer-name {
+		padding-left: 0px;
+		padding-bottom: 0px;
+		margin-top: 6px;
+		display: inline-block;
+	}
+
+	.answer-text {
+		max-width: 100%;
+		display: inline-block;
+
+	}
+
+	.answer-text p {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 1.5;
+		font-style: normal;
+		letter-spacing: .01rem;
+		margin-top: 0;
+		margin-bottom: 6px;
+		padding: 8px 12px 8px 12px;
+		-webkit-border-radius: 20px;
+		-moz-border-radius: 20px;
+		border-radius: 20px;
+		text-align: left;
+	}
+
+	.answer-text p img {
+		margin-top: 5px;
+	}
+
+	.mob-no {
+		display: none;
+	}
+
+	.mob-yes {
+		display: inline-block;
+	}
+
+	.mob-yes-inline {
+		display: inline;
+	}
+
+	.mob-yes-block {
+		display: block;
+	}
+
+	.share-buttons {
+		padding-top: 0px;
+	}
+
+	.footerlink {
+		display: block;
+		padding-bottom: 12px;
+	}
+
+	.footer {
+		padding-top: 14px;
+	}
+
+	#about-div p {
+		font-size: 16px;
+	}
+
+	#title_container p {
+		font-size: 16px;
+	}
+
+	.interview {
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+
+	.interview h1 {
+		margin-top: 24px;
+		margin-bottom: 24px;
+		font-size: 30px;
+	}
+
+	.interview h2 {
+		font-size: 24px;
+	}
+
+	.interview h3 {
+		font-size: 16px;
+	}
+
+	.interview h4 {
+		font-size: 16px;
+	}
+
+
+	#h2-one {
+	  font-size: 24px;
+	  display: block;
+	  margin: 12px 0 10px 0;
+	}
+
+	.i-top-image {
+		z-index: 2000;
+	}
+
+	#h2-two {
+	  font-size: 24px;
+	  display: block;
+	  padding: 0;
+	  margin: 12px 0 10px 0;
+	}
+
+	.i-top-higher-index {
+	  padding: 0 12px;
+	  width: calc( 100% - 24px);
+	}
+
+	.i-top-higher-index p {
+	  font-size: 22px;
+	  color: white;
+	  margin-bottom: 18px;
+	  margin-top: 14px;
+	}
+
+
+
+	..div-interviewee {
+	padding-bottom: 10px;
+	}
+
+	.div-interviewer {
+		text-align: right;
+		padding-bottom: 10px;
+	}
+
+	.with-div {
+		margin-top: 9px;
+	}
+
+	.index-header {
+		font-size: 16px !important;
+	}
+
+	#follow-h3 {
+
+		padding: 8px 12px;
+	}
+
+	#taaalk-to-someone {
+
+		padding: 8px 12px;
+	}
+
+	.follow-scroll {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: auto;
+	background-color: #e9e9e9;
+	padding: 0 12px;
+	z-index: 1000;
+	}
+
+	.follow-scroll h3, h4 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	font-weight: 400;
+	color: #111;
+	display: block;
+	vertical-align: top;
+	}
+
+
+}

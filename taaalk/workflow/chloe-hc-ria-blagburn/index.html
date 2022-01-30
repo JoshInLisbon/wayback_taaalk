@@ -1,0 +1,344 @@
+
+
+<!doctype html>
+<html>
+
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic|Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' type='text/css' href='/css/default-2.css'><!--Default css : 1000+ -->
+    <link rel='stylesheet' type='text/css'  href='/css/medium-2.css'><!--Medium css : 750+ -->
+    <link rel='stylesheet' type='text/css' href='/css/small-2.css'> <!--Small css : 500- -->
+    <script src="/jquery/jQuery.js" type="text/javascript"></script>
+    <script src="/jquery/query.js" type="text/javascript"></script>
+
+    <title>
+                    Product Managment Workflow - Taaalk
+            </title>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-59286185-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div class="popup-backdrop hidden">
+
+</div>
+<div class="popup-content hidden">
+    <div class="popup-content--center">
+      <div class="popup-content--inner">
+
+      </div>
+    </div>
+</div>
+
+
+<script>
+$("body").on("click", ".popup-content", function (e){
+  var clickedInsideInnerContent = $(e.target).parents(".popup-content--inner").length > 0;
+  if (!clickedInsideInnerContent) {
+    closePopup();
+  }
+})
+function showPopup(html) {
+  $(".popup-backdrop").removeClass("hidden");
+  $(".popup-content").removeClass("hidden");
+  $(".popup-content--inner").html(html);
+}
+function closePopup() {
+  $(".popup-backdrop").addClass("hidden");
+  $(".popup-content").addClass("hidden");
+  $(".popup-content--inner").html("");
+}
+
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=635210743191468&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+<style>
+#leftpersonpic,
+.leftpersonpic {
+    background-image: url(/taaalk/workflow/img/chloe.jpeg);
+}
+
+#rightpersonpic,
+.rightpersonpic {
+    background-image: url(/taaalk/workflow/img/ria.png);
+}
+
+</style>
+        <div class="follow-scroll">
+            <div class="followers-div max-732">
+                <h3 id="follow-h3"><a href="#followers">Follow <span class="mob-no">Taaalk</span></a></h3>
+                <h3 style="display:inline-block; padding: 8px 0 8px 16px;"><a href="/">Home<span class="mob-no">page</span></a></h3>
+                <h3 id="taaalk-to-someone"><a href="#signup"><span class="mob-no">Start Conversation</span><span class="mob-yes">Create</span></a></h3>
+                <div class="share-buttons mob-no">
+                    <h3 id="follow-h3b" style="padding-right: 8px; line-height:18px;">Share</h3>
+                    <div style="display: inline-block; padding-right:3px;">
+                    <!-- CHANGE END OF taaalk.co/THIS-BIT.HTML-->
+                    <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="http://platform.twitter.com/widgets/tweet_button.341448ccd3e070268cd097e6a7ee603f.en.html#_=1430746274801&amp;count=none&amp;dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Flocalhost%3A8888%2Ftaaalk%2Fdiversity%2Fmaurice-cherry-josh-summers&amp;size=m&amp;text=Exploring%20The%20Concept%20Of%20Diversity%20-%20Taaalk&amp;url=http%3A%2F%2Ftaaalk.co%2Ftaaalk%2Fdiversity%2Fmaurice-cherry-josh-summers&amp;via=gotaaalk" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-none" title="Twitter Tweet Button" data-twttr-rendered="true" style="position: static; visibility: visible; width: 56px; height: 20px;"></iframe>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    </div>
+                    <!-- CHANGE END OF taaalk.co/THIS-BIT.HTML-->
+                    <div class="fb-like fb_iframe_widget" data-href="http://taaalk.co/taaalk/diversity/maurice-cherry-josh-summers" data-layout="button" data-action="like" data-show-faces="true" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=635210743191468&amp;container_width=114&amp;href=http%3A%2F%2Ftaaalk.co%2Ftaaalk%2Fdiversity%2Fmaurice-cherry-josh-summers&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=true"><span style="vertical-align: bottom; width: 93px; height: 20px;"><iframe name="f333ac87f8" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" src="http://www.facebook.com/v2.0/plugins/like.php?action=like&amp;app_id=635210743191468&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2F6p3So0GhyQP.js%3Fversion%3D41%23cb%3Df2d004efec%26domain%3Dlocalhost%26origin%3Dhttp%253A%252F%252Flocalhost%253A8888%252Ff1cd06136%26relation%3Dparent.parent&amp;container_width=114&amp;href=http%3A%2F%2Ftaaalk.co%2Ftaaalk%2Fdiversity%2Fmaurice-cherry-josh-summers&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=true" style="border: none; visibility: visible; width: 93px; height: 20px;" class=""></iframe></span></div>
+                </div>
+                </div>
+        </div>
+
+        <div class="i-content">
+
+            <!-- Image at top of page with logo in -->
+            <div class="i-top-image overal-interview-image" style="background-image: url(/taaalk/workflow/img/flow2.jpg)">
+                <div class="i-top-image-cover i-top-lower"></div>
+                <div class="i-top-image-cover i-top-higher">
+                    <a href="/"><img id='logo' src='../../img/logo2.png'/></a>
+                </div>
+            </div>
+
+            <div class="interview">
+                <!-- CHANGE THIS -->
+                <!-- Title of Interview -->
+                <h1>
+                    Product Managment Workflow                </h1>
+                <!-- <div class="i-line max-700"></div> -->
+
+                <!-- Interview Details -->
+                <div class="interview-details max-700">
+
+                    <!-- Interviewee Basic Details -->
+                    <div class="taaalk-div-interviewee">
+                        <div class="i-person-image-big" id="leftpersonpic"></div>
+                        <div class="i-taaalk-person-details">
+
+                            <!-- CHANGE -->
+                            <!-- Twitter account name at end of url and text -->
+                            <h3 class="h-taaalk-interviewee"><a href="http://deeplink.me/twitter.com/CHC_Cocotown" target="_blank" style="color: grey;">@CHC_Cocotown</a></h3>
+                            <!-- CHANGE NAME -->
+                            <h2 class="h-taaalk-interviewee">Chloe Corob</h2>
+                        </div>
+                    </div>
+
+                    <!-- CHANGE -->
+                    <!-- Interviewee Deeper Details -->
+                    <!-- To start a new paragraph use: -->
+                    <!-- ...paragaph text end<br><span class="deep-new-paragraph"></span>Paragraph text start... -->
+                    <!-- For links <a href="http://what!" target="_blank" >link name</a> -->
+                    <div class="interview-div-deep-ee" id="deep-interviewee">
+                        <p>Chloe is the Product Manager at <a href='https://editd.com/'>EDITD</a> - an Index Ventures backed company providing fashion retailers with a tool to monitor the prices and stock of their competitors. Before becoming Product Manager, she held the position of Apparel Data Analyst also at EDITD. Chloe has a BSc in Psychology from Exerter university.</p>
+                    </div>
+                    <div class="read-more"><span id="interviewee-more">More Info</span></div>
+
+                    <!-- CHANGE TIWTTER ACCOUNT AND NAME -->
+                    <!-- Interviewer Basic Details -->
+                    <div class="taaalk-div-interviewer">
+                        <div class="i-taaalk-person-details">
+                            <h3 class="h-taaalk-interviewer"><a href="http://deeplink.me/twitter.com/riaface" target="_blank" style="color: grey;">@riaface</a></h3>
+                            <h2 class="h-taaalk-interviewer">Ria Blagburn</h2>
+                        </div>
+                        <div class="i-person-image-big" id="rightpersonpic"></div>
+                    </div>
+
+                    <!-- CHANGE PERSON DESCRIPTION -->
+                    <div class="interview-div-deep-ee" id="deep-interviewer">
+                        <p>Ria is the co-founder of <a href='https://emble.io/' target='_blank'>Emble</a>, a web app that enables you to quickly plan and run events, so you can focus on having more fun with your friends.  Key features include: a dedicated planning stage for organisers to vote on ideas, and the ability to collect money without the need for awkward conversations. On top of co-founding Emble, Ria is Content and Marketing Manager at web development studio <a href="http://www.tkswebsitedesign.co.uk/" target="_blank">TKStarley</a>.</p>
+                    </div>
+                    <div class="read-more"><span id="interviewer-more">More Info</span></div>
+
+                </div>
+
+                <!-- CHANGE STUFF HERE! -->
+                <!-- Follow / Share -->
+                <div class="i-line max-700"></div>
+                <!-- <div class="followers-div max-700">
+                <h3 id="follow-h3" style="color: #15BA64;"><a href="#followers">Follow This Taaalk <small>(Click to learn how)</small></a></h3>
+                <div class="share-buttons mob-no">
+                    <h3 id="follow-h3b" style="padding-right: 8px; line-height:18px;">Share</h3>
+                    <div style="display: inline-block; padding-right:3px;"> -->
+                    <!-- CHANGE END OF taaalk.co/THIS-BIT.HTML-->
+                    <!-- <a href="https://twitter.com/share" class="twitter-share-button" data-url="" data-via="gotaaalk" data-count="none">Tweet</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    </div> -->
+                    <!-- CHANGE END OF taaalk.co/THIS-BIT.HTML-->
+                    <!-- <div class="fb-like" data-href="" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+                </div>
+                </div>
+                <div class="i-line max-700"></div> -->
+
+                <!-- Actual Interview -->
+                <div class="actual-interview">
+
+                                                                        <!-- BEGIN ASK -->
+                            <div class="ask">
+                                <div class="ask-name"><h4>Ria Blagburn</h4></div>
+                                <div class="ask-image">
+                                    <div class="interview-image rightpersonpic mob-yes"></div>
+                                </div>
+                                <div class="ask-text max-732">
+                                                                            <p>I used to work in fashion myself, so I can really see the value of EDITD. How did you come up with it as a concept, and what steps did you take to validate your idea?</p>
+                                                                    </div>
+                                <div class="ask-image ask-image-right">
+                                    <div class="interview-image rightpersonpic mob-no"></div>
+                                </div>
+                            </div>
+                            <!-- END ASK -->
+                                                                                                <!-- BEGIN ANSWER -->
+                            <div class="answer">
+                                <div class="answer-name"><h4>Chloe Corob</h4></div>
+                                <div class="ask-image  ask-image-left">
+                                    <div class="interview-image leftpersonpic"></div>
+                                </div>
+                                <div class="answer-text max-732">
+                                                                            <div><p>Good to meet you too.</p></div>
+                                                                            <div><p>So, first up - EDITD wasn't my idea - but I'll explain a bit about how it came about, and how I ended up there. EDITD started about five years ago, born out of one of our co-founder's frustrations at the fashion industry's decision-making processes. Julia, who was a fashion designer at the time, lamented to Geoff (the other co-founder, and a software engineer) about the general reliance on crystal ball forecaster and the lack of proper information available to make informed business decisions.</p></div>
+                                                                            <div><p>Other industries, like finance, had been monitoring the market and reacting to what was happening for years, but there was nothing comparable for apparel retailers to gain insight about what was happening in their own market. So Geoff and Julia created EDITD, a tool to help buyers and merchandisers make decisions about how to have the right products at the right price, and at the right time. We gather a huge amount of retail data to give our customers (companies like ASOS, Gap, and Farfetch) the information they need to understand their competition. It's a pretty awesome tool, though I'm obviously biased!</p></div>
+                                                                            <div><p>I came to EDITD almost two years ago now, having met the founders at a fashion tech event. When I heard about what they were doing, it really excited me. I felt like they were building something really industry-changing, and I knew I wanted to work for them. I got myself an internship with them, which, luckily for me, turned into a job fairly quickly. I started off doing data QA, and looking after their retail data coverage expansion, before becoming a product manager. Fortunately, I'm still just as excited about the product - probably even more so now I know how our customers use it, and the impact it's having.</p></div>
+                                                                            <div><p>Ok, so, questions for you! Firstly, I'm intrigued, what did you do in the fashion industry? And then, how did you end up founding Emble?</p></div>
+                                                                    </div>
+                                <div class="ask-imaget"></div>
+                            </div>
+                            <!-- END ANSWER -->
+                                                                                                <!-- BEGIN ASK -->
+                            <div class="ask">
+                                <div class="ask-name"><h4>Ria Blagburn</h4></div>
+                                <div class="ask-image">
+                                    <div class="interview-image rightpersonpic mob-yes"></div>
+                                </div>
+                                <div class="ask-text max-732">
+                                                                            <p>I'm a bit of a data nerd myself, so what you're doing at EDITD sounds super interesting! We've got a pretty solid system set up to monitor how people are using emble, which gives us a lot of quantitative data and helps us validate the changes we make.</p>
+                                                                            <p>I kind of fell into the fashion industry - I got a job as a supervisor at a lovely little boutique not long after I left university, and ended up sorting all of the company's online orders as part of that role. I stayed with that company as I did my masters degree (in meteorology and climatology - really interesting, but I don't use it at all!) then they offered me a job managing their website after I graduated. That gave me my first taste of the online world; I moved to London and worked with another couple of fashion companies, then moved back up to Birmingham and stayed in the online marketing field but left fashion behind. I had known Tom (the MD of TKStarley Website Design) socially previously, and he brought me on board to manage the marketing side of TKStarley! </p>
+                                                                            <p>We properly started work on emble a few months after I joined, and it's just grown from there. emble is Tom's brainchild - I see him as being the parent of it, and I'm like the aunt! We've still got TKStarley on the go, and it's definitely a challenge to keep both businesses going, but we're really well organised - we use Asana to manage our tasks and we'd be lost without it!</p>
+                                                                            <p>That leads me nicely onto my next question for you! EDITD looks like a pretty substantial product - how does the team manage workflow? Do you use any project management tools?</p>
+                                                                    </div>
+                                <div class="ask-image ask-image-right">
+                                    <div class="interview-image rightpersonpic mob-no"></div>
+                                </div>
+                            </div>
+                            <!-- END ASK -->
+                                                                                                <!-- BEGIN ANSWER -->
+                            <div class="answer">
+                                <div class="answer-name"><h4>Chloe Corob</h4></div>
+                                <div class="ask-image  ask-image-left">
+                                    <div class="interview-image leftpersonpic"></div>
+                                </div>
+                                <div class="answer-text max-732">
+                                                                            <div><p>I'd love to hear a bit more about how you guys are using Asana. What is it you love about it? Did you try any other tools for task management before that?</p></div>
+                                                                            <div><p>And you're right - EDITD is a pretty chunky product! I'm in my first Product (and project) management role here so I'm feeling my way a lot and trying out various different things along the way.</p></div>
+                                                                            <div><p>In the engineering team, we're mainly using Github, and over the past few months we've been using Waffle.io, which is a kind of Trello-style solution for Github issues. I really like it insofar as it keeps everything in one place, and I can see what everyone's working on, re-prioritise, really quickly add comments, and filter for what I'm looking for. I find it's a good, lightweight solution for our engineering team. For ages I had been using Trello and Github separately but everything got duplicated and confusing, so Waffle's kind of saved me in that respect.</p></div>
+                                                                            <div><p>Beyond the dev team, I spend a lot of time talking either directly to customers, and also with sales and customer success, so I'm constantly picking up a lot of unstructured but really valuable information. Right now, recording and managing that, picking out the themes and keeping it all organised is definitely a work in progress. Currently, I'm using a combination of Trello and spreadsheets, but neither is perfect, so I'm looking at other solutions. I actually looked at Asana the other day too! So I am super interested in your thoughts on the matter :) </p></div>
+                                                                    </div>
+                                <div class="ask-imaget"></div>
+                            </div>
+                            <!-- END ANSWER -->
+                                            
+                </div>
+                
+
+                <!-- Follow Interview -->
+                <div class="follower-details max-672" id="followers">
+                    
+
+                        <!-- CHANGE MAILCHIMP LINK -->
+                        <h4 style="padding-bottom: 8px; color: white;">Get email updates from Taaalk </h4>
+                        <div id="mc_embed_signup max-700 interview-mc-signup">
+                            <!-- THIS PART YOU NEED TO CHANGE -->
+                            <form action="//taaalk.us9.list-manage.com/subscribe/post?u=5d710e80a9014dd01ca36f0f0&amp;id=0558a018fc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                <div id="mc_embed_signup_scroll">
+                                <div class="mc-field-group">
+                                <label for="mce-EMAIL">Email Address </label>
+                                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="updates > email@domain.com" style="width: 99.36%; height: 35px; font-size: 18px; padding: 0 0 0 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; outline: none; border: 1px solid grey; font-family: Roboto; font-weight: 300; -webkit-appearance: none;">
+                            </div>
+                                <div id="mce-responses" class="clear">
+                                    <div class="response" id="mce-error-response" style="display:none"></div>
+                                    <div class="response" id="mce-success-response" style="display:none"></div>
+                                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                <div style="position: absolute; left: -5000px;"><input type="text" name="b_5d710e80a9014dd01ca36f0f0_f35245878c" tabindex="-1" value=""></div>
+                                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="height: 55px; width: 185px; background: url(../../img/mail.png); background-repeat: no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; padding: 0; border: 0; margin: 16px 0 0 0; font-size: 0; cursor: pointer;"></div>
+                                </div>
+                            </form>
+                            </div>
+                                    <div class="padding-space"></div>
+                            <h4 style="padding-bottom: 8px; color: white;">Or follow on Twitter</h4>
+                            <a href="http://deeplink.me/twitter.com/gotaaalk" target="_blank"><img id='twitter' src='../../img/twitter.png'/></a>
+                            <div class="mob-yes-block">
+                                <h3><small style="color: white;">Opens @gotaaalk in Twitter app</small></h3>
+                            </div>
+                            <div class="mob-no">
+                                <h3><small style="color: white;">Opens @gotaaalk in new tab</small></h3>
+                            </div>
+                        </div>
+                        <div class="taaalk-signupspace max-700" id="signup">
+                            <h4 style="padding-bottom: 8px;">Signup To Make Your Own Taaalk</h4>
+                            <div id="mc_embed_signup max-700 interview-mc-signup">
+                                <form action="//taaalk.us9.list-manage.com/subscribe/post?u=5d710e80a9014dd01ca36f0f0&amp;id=17f682aede" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                    <div id="mc_embed_signup_scroll">
+                                        <div class="mc-field-group">
+                                            <label for="mce-EMAIL">Email Address </label>
+                                            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="email@domain.com" style="width: 99.36%; height: 35px; font-size: 18px; padding: 0 0 0 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; outline: none; border: 1px solid #999; font-family: Roboto; font-weight: 300; -webkit-appearance: none;">
+                                        </div>
+                                        <div id="mce-responses" class="clear">
+                                            <div class="response" id="mce-error-response" style="display:none"></div>
+                                            <div class="response" id="mce-success-response" style="display:none"></div>
+                                        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                        <div style="position: absolute; left: -5000px;"><input type="text" name="b_5d710e80a9014dd01ca36f0f0_f35245878c" tabindex="-1" value=""></div>
+                                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="height: 55px; width: 185px; background: url(../../img/signup.png); background-repeat: no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; padding: 0; border: 0; margin: 16px 0 0 0; font-size: 0; cursor: pointer;"></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+               
+                <div class="footer max-700">
+
+
+                    <h4><a href="http://taaalk.co" class="footerlink">Taaalk Homepage</a> <a href="http://taaalk.co/about.html" class="footerlink">About Taaalk</a> <a href="http://deeplink.me/twitter.com/gotaaalk" class="footerlink" target="_blank">@gotaaalk</a> <a href="https://docs.google.com/forms/d/1rbfn-ScB2-Ay2eZx7XvuVP0E0fxJwo0abIvgQ6f07fg/viewform" target="_blank" class="footerlink">Interview Ideas</a> <a href="mailto:lets@taaalk.co?Subject=It%27s%20time%20we%20had%20a%20taaalk..." target="_blank" class="footerlink">Contact</a> </h4>
+                </div>
+
+
+            </div>
+
+        </div>
+        <!-- CORRECT GOOGLE ANALYTICS -->
+        <script>
+             $(window).on("unload", function(){
+               ga('send', 'event', 'Time on Page', 'onUnload');
+             });
+             var updateTimeOnPage = [10, 20, 40, 60, 90, /*120,*/ 150, 180]; // 120 handled by setInterval
+             $.each(updateTimeOnPage, function(i, seconds){
+               setTimeout(sendTimeOnPageUpdate, seconds * 1000);
+             });
+             setInterval(sendTimeOnPageUpdate, 120 * 1000);
+             var pageLoadedAt = new Date();
+             function sendTimeOnPageUpdate(){
+               ga('send', 'event', 'Time on Page', 'interval');
+             }
+        </script>
+
+
+  </body>
+
+</html>

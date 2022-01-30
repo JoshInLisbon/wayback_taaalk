@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <title>Taaalk | Ruby on Rails Controllers: Best Structural Practices - Hassanin Ahmed, Martijn Storck &amp; Joshua Summers</title>
+        <meta id="meta" name="js-loader" content="tlks-show" >
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="B8tpNiG2jLbT6PX4VZAyaVqq6aXJd/iUFPmqbHkluknLJK101Wi4mlM3nE40osZl/HTmpJdfcX5aU/n39F892g==" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/packs/js/application-9c414d76ef68f0456f95.js" data-turbolinks-track="reload"></script>
+    <link rel="stylesheet" media="all" href="/assets/application-40181b187553227631c8f4df1d7000634685c11b6ef454fe80c408b8da3ccf34.css" data-turbolinks-track="reload" />
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon-d3e220a5d00985ec7043ba5c160cac8a73df50fba21d2fbb684af206efe8eca3.ico" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-light">
+
+  <a class="navbar-brand tlk-brand" href="/">Taaa<span class='fc-logo'>l</span>k</a>
+
+  <div class="navbar-non-logo">
+    <div class="nav-btn-holder">
+      <a href="/start-conversation">
+        <div class="nav-btn ">
+        <i class="fas fa-align-left"></i>Start a Conversation
+        </div>
+</a>    </div>
+
+
+    <div class="nav-btn-holder">
+
+        <a href="/users/sign_in">
+        <div class="nav-btn login-btn">
+          Log In
+        </div>
+</a>    </div>
+  </div>
+</nav>
+
+    <div class="calc-height-navbar">
+      
+  <div id="tlk-section-read">
+    
+<div class="tlk-image bg-purp"
+  style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBYUk9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7ca31fbbaa6a629bd2bc22d9207cc44394d57157/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFKQUJqQTZFR0YxZEc5ZmIzSnBaVzUwVkRvTVozSmhkbWwwZVVraUMyTmxiblJsY2dZNkJrVlUiLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--25fddff6bdb0fe960586d897c16d7c7709ec405e/lego-cell-cultured-meat-research-march-2019.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;"
+>
+  <h1 class="tlk-title">Ruby on Rails Controllers: Best Structural Practices</h1>
+
+</div>
+
+
+<div class="tlk-container">
+
+    <div class="spkr-color-100">
+      <div class="msg-39">
+        <div class="spkr-info spkr-info-left">
+          <div class="spkr-image-and-name">
+            <div class="spkr-bio-image spkr-image image-spkr-100"
+                style="background-image: url(/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b12355bc47dd05a966918b8f6edea2442e056d46/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2QzNKbGMybDZaVWtpRFRFd05IZ3hNRFJlQmpvR1JWUTZFR0YxZEc5ZmIzSnBaVzUwVkRvTVozSmhkbWwwZVVraUMyTmxiblJsY2dZN0IxUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--cccc2840663003c8560dd0321607ac1c663d4500/IMG-20200426-WA0002.jpg)"
+              >
+            </div>
+            <div>
+              <h3><a class="name-spkr-100" href="/u/joshua-summers">Joshua Summers</a></h3>
+              <div id="twitter-handle-div-100">
+                  <a id="twitter-handle-100" class="twitter-handle" href="https://twitter.com/JoshSummers1234"><i class="fab fa-twitter"></i> JoshSummers1234</a>
+              </div>
+            </div>
+          </div>
+          <div class="spkr-biog-holder-tlk-left">
+            <div class="spkr-biog biog-spkr-100">
+              <div class="spkr-biog-left spkr-biog-present">
+                <div class="trix-content">
+  <div>I'm the lead developer at Taaalk. Right now my controllers are a bit of a mess, everything is included and they do way more than CRUD. Is that wrong or ok? I don't know. This Taaalk will hopefully teach me.</div>
+</div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="spkr-color-101">
+      <div class="msg-23">
+        <div class="spkr-info spkr-info-right">
+          <div class="spkr-image-and-name">
+            <div class="spkr-bio-image spkr-image image-spkr-101"
+                style="background-image: url(https://taaalk.co/assets/user-fb72496d9b86b96d0eaa9cb88d48193837d6d2693e24a554c078f5a78c7a86d9.svg)"
+              >
+            </div>
+            <div>
+              <h3><a class="name-spkr-101" href="/u/martijn-storck">Martijn Storck</a></h3>
+              <div id="twitter-handle-div-101">
+              </div>
+            </div>
+          </div>
+          <div class="spkr-biog-holder-tlk-right">
+            <div class="spkr-biog biog-spkr-101">
+              <div class="spkr-biog-left spkr-biog-present">
+                <div class="trix-content">
+  <div>Freelance developer that just can’t stop enjoying Ruby on Rails</div>
+</div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="spkr-color-102">
+      <div class="msg-25">
+        <div class="spkr-info spkr-info-left">
+          <div class="spkr-image-and-name">
+            <div class="spkr-bio-image spkr-image image-spkr-102"
+                style="background-image: url(https://taaalk.co/assets/user-fb72496d9b86b96d0eaa9cb88d48193837d6d2693e24a554c078f5a78c7a86d9.svg)"
+              >
+            </div>
+            <div>
+              <h3><a class="name-spkr-102" href="/u/hassanin-ahmed">Hassanin Ahmed</a></h3>
+              <div id="twitter-handle-div-102">
+                  <a id="twitter-handle-102" class="twitter-handle" href="https://twitter.com/sas1ni69"><i class="fab fa-twitter"></i> sas1ni69</a>
+              </div>
+            </div>
+          </div>
+          <div class="spkr-biog-holder-tlk-left">
+            <div class="spkr-biog biog-spkr-102">
+              <div class="spkr-biog-left spkr-biog-present">
+                <div class="trix-content">
+  <div>I’m a web developer with just a little over 10 years of experience. Almost 7 of those years have been spent writing Ruby on Rails. <br><br>I currently work on a healthcare SaaS built with Rails and Angular.js. </div>
+</div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+  </div>
+
+
+<div class="tlk-follow-div">
+    <div class="tlk-container">
+    <a class="tlk-follow-link link-txt" data-remote="true" rel="nofollow" data-method="post" href="/tlks/60/tlk_follows?spkrs_follow=true">
+    Follow this Taaalk
+</a>    <div class="tlk-note tlk-follow-note">
+      <p>4 followers</p>
+    </div>
+    <div class="tlk-note tlk-follow-note tlk-views-note" style="margin-left: 3px;">
+      <p>1,415 views</p>
+    </div>
+</div>
+
+</div>
+
+<div class="tlk-container">
+<div class="big-blue-split"></div>
+</div>
+
+
+  <div class="tlking-container">
+
+      <div class="tlk-blob tlk-blob-right" id="1" >
+        <div class="tlk-blob-spkr">
+          <div class="tlk-tlking-image spkr-image image-spkr-101"
+              style="background-image: url(https://taaalk.co/assets/user-fb72496d9b86b96d0eaa9cb88d48193837d6d2693e24a554c078f5a78c7a86d9.svg)"
+            >
+          </div>
+          <div class="name-spkr-101 tlk-blob-name">Martijn Storck</div>
+          <div class="tlk-blob-date">17:59, 25 Jun 20</div>
+        </div>
+        <div class="spkr-color-101">
+          <div class="msg-23" target="spkr-color-">
+            <div class="tlk-blob-msg"><div class="trix-content">
+  <div class="tlk-bubble-holder"><div class="tlk-bubble">I’ve been a Rails dev for over ten years and I’ve tried all the stuff that came along that supposed to improve on the MVC model in Ruby on Rails, such as DCI and Service Objects for example. In the end I found none of them worth the extra hassle. Do you have an example from your codebase where ‘vanilla’ Rails controllers fall short in your view?</div></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tlk-blob tlk-blob-left" id="2" >
+        <div class="tlk-blob-spkr">
+          <div class="tlk-tlking-image spkr-image image-spkr-100"
+              style="background-image: url(/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b12355bc47dd05a966918b8f6edea2442e056d46/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2QzNKbGMybDZaVWtpRFRFd05IZ3hNRFJlQmpvR1JWUTZFR0YxZEc5ZmIzSnBaVzUwVkRvTVozSmhkbWwwZVVraUMyTmxiblJsY2dZN0IxUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--cccc2840663003c8560dd0321607ac1c663d4500/IMG-20200426-WA0002.jpg)"
+            >
+          </div>
+          <div class="name-spkr-100 tlk-blob-name">Joshua Summers</div>
+          <div class="tlk-blob-date">18:04, 25 Jun 20</div>
+        </div>
+        <div class="spkr-color-100">
+          <div class="msg-39" target="spkr-color-">
+            <div class="tlk-blob-msg"><div class="trix-content">
+  <div class="tlk-bubble-holder"><div class="tlk-bubble">Yes I do have one. For me it's not that the controller falls short... It's that I keep filling it up! It is doing the opposite of falling short, it's fat and big! Let me get an example up...</div></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tlk-blob tlk-blob-left" id="3" >
+        <div class="tlk-blob-spkr">
+          <div class="tlk-tlking-image spkr-image image-spkr-100"
+              style="background-image: url(/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b12355bc47dd05a966918b8f6edea2442e056d46/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2QzNKbGMybDZaVWtpRFRFd05IZ3hNRFJlQmpvR1JWUTZFR0YxZEc5ZmIzSnBaVzUwVkRvTVozSmhkbWwwZVVraUMyTmxiblJsY2dZN0IxUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--cccc2840663003c8560dd0321607ac1c663d4500/IMG-20200426-WA0002.jpg)"
+            >
+          </div>
+          <div class="name-spkr-100 tlk-blob-name">Joshua Summers</div>
+          <div class="tlk-blob-date">18:17, 25 Jun 20</div>
+        </div>
+        <div class="spkr-color-100">
+          <div class="msg-39" target="spkr-color-">
+            <div class="tlk-blob-msg"><div class="trix-content">
+  <div class="tlk-bubble-holder"><div class="tlk-bubble">This is my UsersController:</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble"><pre>require 'action_view'
+
+class UsersController &lt; ApplicationController
+  skip_before_action :authenticate_user!, only: :show
+  before_action :set_user, only: [:show, :edit, :tlk_with_request, :destroy_tlk_with_me, :destroy_tlk_with_me_user_page, :destroy]
+  
+  def show
+    ...
+  end
+
+  def edit
+    ...
+  end
+
+  def update
+    ...
+  end
+
+  def tlk_with_me
+    ...
+  end
+
+  def tlk_with_request
+    ...
+  end
+
+  def send_tlk_request
+    ...
+  end
+
+  def destroy_tlk_with_me
+    ...
+  end
+
+  def destroy_tlk_with_me_user_page
+    ...
+  end
+
+  def destroy
+    ...
+  end
+
+  def update_password
+    ...
+  end
+
+  private
+
+  def set_user
+    ...
+  end
+
+  def set_user_tlks
+    ...
+  end
+
+  def user_params
+    ...
+  end
+
+  def user_params_twm_new_page
+    ...
+  end
+
+  def user_twm_params
+    ...
+  end
+
+  def password_param
+    ...
+  end
+
+  def update_password_params
+    ...
+  end
+
+  def tlk_request_user_params
+    ...
+  end
+
+  def tlk_request_params
+    ...
+  end
+
+  def create_tlk_request
+    ...
+  end
+
+  def update_user_profile_with_tlk_request
+    ...
+  end
+
+  def send_tlk_request_mail
+    ...
+  end
+
+  def spkrs_update_after_user_update
+    ...
+  end
+end</pre></div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">So you can see I've stripped out all of the methods so we can focus on structure.</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">It all works, but this is a CRUD+ controller...</div></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tlk-blob tlk-blob-right" id="4" >
+        <div class="tlk-blob-spkr">
+          <div class="tlk-tlking-image spkr-image image-spkr-101"
+              style="background-image: url(https://taaalk.co/assets/user-fb72496d9b86b96d0eaa9cb88d48193837d6d2693e24a554c078f5a78c7a86d9.svg)"
+            >
+          </div>
+          <div class="name-spkr-101 tlk-blob-name">Martijn Storck</div>
+          <div class="tlk-blob-date">18:37, 25 Jun 20</div>
+        </div>
+        <div class="spkr-color-101">
+          <div class="msg-23" target="spkr-color-">
+            <div class="tlk-blob-msg"><div class="trix-content">
+  <div class="tlk-bubble-holder"><div class="tlk-bubble">That is indeed a big controller.</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">First off: the actions. I always find it a good idea to base controllers on a single resource. It seems that there are a few methods in here that actually deal with talks instead of users (or maybe some intermediate join model). If your UsersController serves a single purpose (dealing with users), these talk methods should move to a TalkController or TalkRequestController.</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">Then: the _params. It’s good that you care about strong parameters, but this is really something you should think about as a global policy, not something on the controller level. For example: If a user is always allowed to change his name and password, why would you disallow those params outside of the update_password action? It’s better to keep these decisions in one place. Remember: strong params was mainly introduced to prevent users from doing stuff like changing their own ‘role’ or ‘admin’ attributte.</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">Finally is it possible that there’s some redundancy/repetition in the various set_ and update_ private methods?</div></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tlk-blob tlk-blob-left" id="5" >
+        <div class="tlk-blob-spkr">
+          <div class="tlk-tlking-image spkr-image image-spkr-100"
+              style="background-image: url(/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b12355bc47dd05a966918b8f6edea2442e056d46/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2QzNKbGMybDZaVWtpRFRFd05IZ3hNRFJlQmpvR1JWUTZFR0YxZEc5ZmIzSnBaVzUwVkRvTVozSmhkbWwwZVVraUMyTmxiblJsY2dZN0IxUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--cccc2840663003c8560dd0321607ac1c663d4500/IMG-20200426-WA0002.jpg)"
+            >
+          </div>
+          <div class="name-spkr-100 tlk-blob-name">Joshua Summers</div>
+          <div class="tlk-blob-date">20:14, 25 Jun 20</div>
+        </div>
+        <div class="spkr-color-100">
+          <div class="msg-39" target="spkr-color-">
+            <div class="tlk-blob-msg"><div class="trix-content">
+  <div class="tlk-bubble-holder"><div class="tlk-bubble"><blockquote>If your UsersController serves a single purpose (dealing with users), these talk methods should move to a TalkController or TalkRequestController.</blockquote></div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">Yes, I have a Talks (called Tlks for ease) Controller and a TlkRequestsController. I can see that I have put some stuff in this UsersController which should not be there, for example:</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble"><pre>def tlk_with_request
+  @tlk_request = TlkRequest.new()
+  @title = "Request to Taaalk with #{@user.username}"
+end</pre></div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">Should clearly be the `def new` of my TlkRequestsController, however there are some things which I find more confusing. Take:</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble"><pre>def tlk_with_me
+  current_user.update!(user_params_twm_new_page)
+  redirect_to new_tlk_path
+end
+
+...
+
+private
+
+...
+
+def user_params_twm_new_page
+  params.require(:user).permit(:image, :username, :tlk_with_me)
+end</pre></div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">Users have their standard details (handled by normal `create` and `update` methods in the controlller), and then can add a special :tlk_with_me rich_text attachment in certain places within the application (e.g. the <a href="https://taaalk.co/start-conversation">Start a Conversation</a> page). It's in these situations where I feel I need to break CRUD.</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">Before we get onto the params, which I think you've said some very interesting things about, how would you handle a situation like that?</div></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tlk-blob tlk-blob-right" id="6" >
+        <div class="tlk-blob-spkr">
+          <div class="tlk-tlking-image spkr-image image-spkr-101"
+              style="background-image: url(https://taaalk.co/assets/user-fb72496d9b86b96d0eaa9cb88d48193837d6d2693e24a554c078f5a78c7a86d9.svg)"
+            >
+          </div>
+          <div class="name-spkr-101 tlk-blob-name">Martijn Storck</div>
+          <div class="tlk-blob-date">06:44, 26 Jun 20</div>
+        </div>
+        <div class="spkr-color-101">
+          <div class="msg-23" target="spkr-color-">
+            <div class="tlk-blob-msg"><div class="trix-content">
+  <div class="tlk-bubble-holder"><div class="tlk-bubble">Great example. The `tlk_with_me` action updates a User record, so why not use the update action you already have? You could add an extra parameter to the request to decide where to redirect the user to. For example post your form to user_path(redirect_to: :new_talk) and use the following code:</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble"><pre>def update
+  user.update!(user_params)
+  if params[:redirect] == "new_talk"
+    redirect_to new_tlk_path
+  else
+    redirect_to user, notice: "Profile updated!"
+  end
+end</pre></div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">I choose to not include the actual path to redirect to in the param as a slightly paranoid precaution against things like CSRF/XSS attacks.</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">The _params method is also important in the example, you could just add the :tlk_with_me field to the user_params whitelist and use that, instead of defining another _params method. Consider the attack vector here: the only thing doing that enables is letting the user hack an additional 'tlk_with_me' field into another form and update their details from there. Not a security risk, so I'd say stick with one user_params. You can authorize the different fields in there based on user role (for later).</div></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tlk-blob tlk-blob-left" id="7" >
+        <div class="tlk-blob-spkr">
+          <div class="tlk-tlking-image spkr-image image-spkr-100"
+              style="background-image: url(/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b12355bc47dd05a966918b8f6edea2442e056d46/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2QzNKbGMybDZaVWtpRFRFd05IZ3hNRFJlQmpvR1JWUTZFR0YxZEc5ZmIzSnBaVzUwVkRvTVozSmhkbWwwZVVraUMyTmxiblJsY2dZN0IxUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--cccc2840663003c8560dd0321607ac1c663d4500/IMG-20200426-WA0002.jpg)"
+            >
+          </div>
+          <div class="name-spkr-100 tlk-blob-name">Joshua Summers</div>
+          <div class="tlk-blob-date">13:52, 28 Jun 20</div>
+        </div>
+        <div class="spkr-color-100">
+          <div class="msg-39" target="spkr-color-">
+            <div class="tlk-blob-msg"><div class="trix-content">
+  <div class="tlk-bubble-holder"><div class="tlk-bubble">Right, I see. So it seems like a theme is emerging: having wide roads for different forms of traffic. That probably sounds a bit vague, but what I mean is now the update action works for many different paths, and the _params method works for different paths too. Everything is a bit wider, but because of that there are less things, and the controller is neater.</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">I actually used the method you suggested already since you suggested it. You might notice that you now have note taking functionality:</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">
+<span>﻿</span><action-text-attachment sgid="BAh7CEkiCGdpZAY6BkVUSSI5Z2lkOi8vdGFhYWxrLWVkZ2UvQWN0aXZlU3RvcmFnZTo6QmxvYi8xNzE_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiD2F0dGFjaGFibGUGOwBUSSIPZXhwaXJlc19hdAY7AFQw--da3f94fc8037e35530f4c10be1a07f7d1291f0ac" content-type="image/png" url="https://taaalk.co/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBYXM9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0a57b1c40ec2f34321b915a7f8073294bf31e581/image.png" filename="image.png" filesize="16118" width="728" height="236" previewable="true" presentation="gallery"><figure class="attachment attachment--preview attachment--png">
+    <img src="https://taaalk.co/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBYXM9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0a57b1c40ec2f34321b915a7f8073294bf31e581/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VY21WemFYcGxYM1J2WDJ4cGJXbDBXd2RwQWdBRWFRSUFBdz09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--49a1b3a84cee51a7afa24b1e4856d59312b48236/image.png">
+
+  <figcaption class="attachment__caption">
+      <span class="attachment__name">image.png</span>
+      <span class="attachment__size">15.7 KB</span>
+  </figcaption>
+</figure></action-text-attachment><span>﻿</span>
+</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">`notes` are attached to `Spkrs` (Tlk participants), so can be set when the Spkr updates. Instead of creating a new action in the controller I just added an if statement to the `update` method. </div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">So maybe flipping things backwards, are there any good reasons to break the CRUD design of a controller?</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">[P.S. feel free to get involved Hassanin.] </div></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tlk-blob tlk-blob-left" id="8" >
+        <div class="tlk-blob-spkr">
+          <div class="tlk-tlking-image spkr-image image-spkr-100"
+              style="background-image: url(/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b12355bc47dd05a966918b8f6edea2442e056d46/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2QzNKbGMybDZaVWtpRFRFd05IZ3hNRFJlQmpvR1JWUTZFR0YxZEc5ZmIzSnBaVzUwVkRvTVozSmhkbWwwZVVraUMyTmxiblJsY2dZN0IxUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--cccc2840663003c8560dd0321607ac1c663d4500/IMG-20200426-WA0002.jpg)"
+            >
+          </div>
+          <div class="name-spkr-100 tlk-blob-name">Joshua Summers</div>
+          <div class="tlk-blob-date">21:32, 29 Jun 20</div>
+        </div>
+        <div class="spkr-color-100">
+          <div class="msg-39" target="spkr-color-">
+            <div class="tlk-blob-msg"><div class="trix-content">
+  <div class="tlk-bubble-holder"><div class="tlk-bubble">And in addition, in my Ruby on Rails world I am comfortable with controllers, and don't really have any good ideas of how to remove things from them.</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">For example 'modules' and 'helpers' - I don't really know what they are or when/how to use them either. It feels like I can get whatever I want done by bulking up my controllers with many public and private methods, but I always feel things are not done well, even if they work...</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">Maybe it would be sensible to discuss some of these concepts and the ideas around using them so we can add a few more solutions to the discussion.</div></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tlk-blob tlk-blob-right" id="9" >
+        <div class="tlk-blob-spkr">
+          <div class="tlk-tlking-image spkr-image image-spkr-101"
+              style="background-image: url(https://taaalk.co/assets/user-fb72496d9b86b96d0eaa9cb88d48193837d6d2693e24a554c078f5a78c7a86d9.svg)"
+            >
+          </div>
+          <div class="name-spkr-101 tlk-blob-name">Martijn Storck</div>
+          <div class="tlk-blob-date">06:52, 02 Jul 20</div>
+        </div>
+        <div class="spkr-color-101">
+          <div class="msg-23" target="spkr-color-">
+            <div class="tlk-blob-msg"><div class="trix-content">
+  <div class="tlk-bubble-holder"><div class="tlk-bubble"><blockquote>So maybe flipping things backwards, are there any good reasons to break the CRUD design of a controller?</blockquote></div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">In my opinion, once a controller is dedicated to exposing a RESTful resource you shouldn't think lightly about breaking that. However, it is perfectly fine to have 'helper' controllers for tasks that do not operate on a specific resource or maybe trigger some business logic.</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">Again, these are just my opinions. Rails leaves room to structure your app the way you feel fit. I like to stick close to the basics as explained in the guides, though, because it makes it easy to onboard new developers or revisit old code.</div></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tlk-blob tlk-blob-right" id="10" >
+        <div class="tlk-blob-spkr">
+          <div class="tlk-tlking-image spkr-image image-spkr-101"
+              style="background-image: url(https://taaalk.co/assets/user-fb72496d9b86b96d0eaa9cb88d48193837d6d2693e24a554c078f5a78c7a86d9.svg)"
+            >
+          </div>
+          <div class="name-spkr-101 tlk-blob-name">Martijn Storck</div>
+          <div class="tlk-blob-date">06:55, 02 Jul 20</div>
+        </div>
+        <div class="spkr-color-101">
+          <div class="msg-23" target="spkr-color-">
+            <div class="tlk-blob-msg"><div class="trix-content">
+  <div class="tlk-bubble-holder"><div class="tlk-bubble">Helpers are a more controversial topic. Some believe them to be an antipattern and prefer to use something like a presenter or even cell. Helpers have two distinct properties: they deal with presentation only and are only available in views. If you have methods that you'd like to use from multiple controllers you can use a Concern like that. Both Helpers and Concerns are implemented as modules; a Ruby primitive that allows groups of methods to be pulled into a class.</div></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tlk-blob tlk-blob-left" id="11" >
+        <div class="tlk-blob-spkr">
+          <div class="tlk-tlking-image spkr-image image-spkr-100"
+              style="background-image: url(/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b12355bc47dd05a966918b8f6edea2442e056d46/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2QzNKbGMybDZaVWtpRFRFd05IZ3hNRFJlQmpvR1JWUTZFR0YxZEc5ZmIzSnBaVzUwVkRvTVozSmhkbWwwZVVraUMyTmxiblJsY2dZN0IxUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--cccc2840663003c8560dd0321607ac1c663d4500/IMG-20200426-WA0002.jpg)"
+            >
+          </div>
+          <div class="name-spkr-100 tlk-blob-name">Joshua Summers</div>
+          <div class="tlk-blob-date">11:55, 15 Jul 20</div>
+        </div>
+        <div class="spkr-color-100">
+          <div class="msg-39" target="spkr-color-">
+            <div class="tlk-blob-msg"><div class="trix-content">
+  <div class="tlk-bubble-holder"><div class="tlk-bubble"><blockquote>However, it is perfectly fine to have 'helper' controllers for tasks that do not operate on a specific resource or maybe trigger some business logic.</blockquote></div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">So let's start with the 'helper' controller idea. Say you were building a simple blogging application with a Post model and a Comment model.</div></div><div class="tlk-bubble-holder"><div class="tlk-bubble">Let's say you were to add a feature to that that might need a 'helper' controller. What kind of feature might that be, and what methods would be in this new (non-RESTful?) controller?</div></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+
+
+<div class="tlk-container">
+  <div class="big-white-split big-blue-split-bottom"></div>
+</div>
+
+
+<div class="tlk-container">
+
+
+
+
+</div>
+
+  <div class="tlk-follow-div">
+    <div class="tlk-container">
+    <a class="tlk-follow-link link-txt" data-remote="true" rel="nofollow" data-method="post" href="/tlks/60/tlk_follows?spkrs_follow=true">
+    Follow this Taaalk
+</a>    <div class="tlk-note tlk-follow-note">
+      <p>4 followers</p>
+    </div>
+    <div class="tlk-note tlk-follow-note tlk-views-note" style="margin-left: 3px;">
+      <p>1,415 views</p>
+    </div>
+</div>
+
+</div>
+
+  <div class="tlk-btm-follow-spacer"></div>
+
+<div class="tlk-container anyone-tlk-container-2">
+  <a class="link-txt" href="/start-conversation">Start your own Taaalk</a>,
+  <a class="link-txt" href="/start-conversation">leave your details</a> or
+  <a class="link-txt" href="/start-conversation">meet someone</a>
+  to Taaalk with.
+</div>
+
+
+
+    </div>
+    <div class="bg-footer div-footer">
+    <div class="narrow-div-footer internal-div-footer">
+    <a class="navbar-brand tlk-brand" href="/">Taaa<span class='fc-logo'>l</span>k</a>
+    <div class="taaalk-about josh-info-closed">
+      <p><strong>So why did Taaalk get built?</strong></p>
+      <p>The world is filled with people who know lots of cool stuff and weird things. When it comes to interviews, traditionally it's been the case that a journalist has to take an interest in what you do before you get one. That doesn't happen too often, so it's probably the case that the world is under-interviewed. Taaalk is here to change that. INTERVIEWS FOR EVERYONE.</p>
+      <p>But the word "interview" doesn't really capture what Taaalk is about. It's a bit too formal, and implies there is one person with all the knowledge (the interviewee) and another person getting it from them (the journalist/interviewer). Taaalk can be used more flexibly than that. Four people (a Taaalk can have any number of people) who know a lot about a subject can have an extremely nerdy and detailed Taaalk about it. Three people who don't know too much about anything can blab away to each other, just because they enjoy blabbing. And you don't even need to invite anyone to your Taaalk, if you want to write a poem every day, or share a continuous stream of thoughts about a subject of your choice, you can use Taaalk as a place to do that; monologues are a-ok.</p>
+      <p>And Taaalk is built for you to be even more creative than that. You can invite yourself to your own Taaalk, change the second-you's details and have an imaginary conversation. You can invite yourself to a Taaalk any number of times, and write a whole play made up of the dialogue of imaginary characters. </p>
+      <p><strong>If you don't have anyone to Taaalk with today</strong>, you can leave your details on the <a href="/start-conversation">Start a Conversation</a> page. This means someone looking to Taaalk can introduce themselves to you. And you can introduce yourself to someone else who has left their details.</p>
+      <p>More seriously, <strong>we have all grown up in a digital world that is a bit awkward</strong>. In the real world you don't walk around shouting out random facts and opinions, instead you talk to people. And in the real world while you're talking, hundreds of random people don't jump into your conversation. The best chats have a healthy level of intimacy. Taaalk tries to recreate these real world properties online. Firstly, it is all about talking (taaalking). Back and forths. This makes things feel a bit more natural than shouting out snip-its of thoughts and ideas. There's also no character limit and you can save drafts before you reply, so it's a place for deep conversations. You might find that you enjoy Taaalking even if you have normally found yourself to be a bit too shy to fully enjoy other platforms. Secondly, though anyone can read a Taaalk, only the people the "Taaalk Owner" (the person who started the Taaalk) chooses can join in the conversation. This keeps things intimate.</p>
+      <p><strong>What you say matters (and might embarrass you).</strong> Because of this Taaalk comes with features to make you feel safe sharing your thoughts. Firstly, even if you are not the Taaalk Owner, you can leave a Taaalk and delete all your messages at the same time. The Taaalk will still exist, but what you've written will not. If you are a Taaalk Owner you can delete your Taaalk at any time. You can delete your account, deleting all messages you've written on the Taaalk platform and all the Taaalks you've started at the same time. It's possible to edit or delete an individual message after you have written it. And because it's possible to edit a message after someone has responded to it, we flag up when a message has been edited, so if you are the responder, you don't have to worry about someone changing the question after you've written a response to it. We hope these measures make you feel safe to share yourself on Taaalk, and if you have any more ideas, please come to the <a href="/t/taaalk-feedback">Taaalk feedback conversation</a> to discuss them.</p>
+    </div>
+    <p id="taaalk-read-about">About</p>
+    <script type="text/javascript">
+      var taaalkAbout = document.querySelector('.taaalk-about');
+      var taaalkAboutBtn = document.querySelector('#taaalk-read-about')
+      taaalkAboutBtn.addEventListener('click', (event) => {
+        taaalkAbout.classList.toggle('josh-info-closed');
+        if (taaalkAboutBtn.innerText == 'About') {
+          taaalkAboutBtn.innerText = 'Show less'
+        } else {
+          taaalkAboutBtn.innerText = 'About'
+        }
+      });
+    </script>
+    <p><a href="/t/taaalk-feedback">Feedback</a></p>
+
+    <!-- <div class="josh-info josh-info-closed">
+      <p>Hi, my name is Joshua and I built and designed Taaalk. I'm a product focused full stack developer and before that I was an analyst at one of Europe's top VC funds. I'm looking to be employed in either field, so please <a href="mailto:eichler [dot] summers [at] gmail [dot] com">get in touch with me</a> if you're hiring.</p>
+      <p><strong>Other projects:</strong></p>
+      <p>I write about psychology and technology.</p>
+      <p><strong>Psychology: </strong><a href="https://psyarxiv.com/k6trz">https://psyarxiv.com/k6trz</a> - [Paper] A Suggestion for a New Interpretation of Dreams: Dreaming Is the Inverse of Anxious Mind-Wandering.</p>
+      <p><strong>Psychology: </strong>(Coming soon) [Book] The Mechanics of Mental Health. <a href="https://twitter.com/JoshSummers1234">Follow me on Twitter</a> for updates.</p>
+      <p><strong>Technology: </strong>(Coming soon) [Book] How to Analyse Like a Venture Capitalist. <a href="https://twitter.com/JoshSummers1234">Twitter</a> for updates.</p>
+    </div>
+    <p id="josh-read-more">Hire me & see my other projects</p>
+    <script type="text/javascript">
+      var joshInfo = document.querySelector('.josh-info');
+      var joshInfoBtn = document.querySelector('#josh-read-more')
+      joshInfoBtn.addEventListener('click', (event) => {
+        joshInfo.classList.toggle('josh-info-closed');
+        if (joshInfoBtn.innerText == 'Hire me & see my other projects') {
+          joshInfoBtn.innerText = 'Show Less'
+        } else {
+          joshInfoBtn.innerText = 'Hire me & see my other projects'
+        }
+      });
+    </script> -->
+    <p class="opacity07">By using this website you agree to our:</p>
+    <p><a href="/privacy">Privacy Policy</a> <span class="opacity07">and</span> <a href="/terms">Terms of Service</a></p>
+  </div>
+</div>
+
+    <script src="/packs/js/on_new_page-72c58be62c1dcc8a1a70.js"></script>
+  </body>
+</html>
