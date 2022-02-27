@@ -15,10 +15,11 @@ taaalks = Dir["t/*/index.html"].map do |path|
     }
   end
 
-  messages = page.css('.tlk-blob').map do |message|
+  messages = page.css('.tlk-blob').map do |tlk_blob|
     {
-      speaker_id: message.css('div[class^="name-spkr-"]')[0].attr('class').delete("^0-9"),
-      created_at: message.css('div[class="tlk-blob-date"]').text.partition("(")[0].strip,
+      speaker_id: tlk_blob.css('div[class^="name-spkr-"]')[0].attr('class').delete("^0-9"),
+      created_at: tlk_blob.css('div[class="tlk-blob-date"]').text.partition("(")[0].strip,
+      message: tlk_blob.search('div[target="spkr-color-"]').children.to_html
     }
   end
 
