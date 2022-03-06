@@ -1,4 +1,5 @@
 require 'nokogiri'
+require 'json'
 
 taaalks = Dir["t/*/index.html"].map do |path|
   page = Nokogiri::HTML(File.open(path))
@@ -18,7 +19,7 @@ taaalks = Dir["t/*/index.html"].map do |path|
   messages = page.css('.tlk-blob').map do |tlk_blob|
     {
       speaker_id: tlk_blob.css('div[class^="name-spkr-"]')[0].attr('class').delete("^0-9"),
-      created_at: tlk_blob.css('div[class="tlk-blob-date"]').text.partition("(")[0].strip,
+      created_at: tlk_blob.css('div[class="tlk-blob-date"]').text.split("(")[0].strip,
       message: tlk_blob.search('div[target="spkr-color-"]').children.to_html
     }
   end
@@ -30,4 +31,4 @@ taaalks = Dir["t/*/index.html"].map do |path|
   }
 end
 
-pp taaalks
+File.open("taaalks.json", "w+") { |file| file.write(taaalks.to_json) }
