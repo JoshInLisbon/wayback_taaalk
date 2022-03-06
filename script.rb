@@ -31,4 +31,4 @@ taaalks = Dir["t/*/index.html"].map do |path|
   }
 end
 
-File.open("taaalks.json", "w+") { |file| file.write(taaalks.to_json) }
+File.open('taaalks.json', 'w') { |file| file.write(taaalks.to_json) }
